@@ -1,0 +1,94 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.6rem;
+}
+.form-update {
+  padding: 0 5%;
+}
+.content {
+  position: relative;
+}
+
+// CSS for btn
+// btn of personal and secure page
+
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px;
+  margin-top: 2rem;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 45%;
+    height: 50px;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  .btn-cancel {
+    background: rgba(231, 95, 87, 0.7);
+  }
+  .btn-save {
+    background: rgba(154, 172, 101, 0.7);
+  }
+
+  .btn-submit {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 40%;
+    height: 50px;
+    margin: 1rem auto 3rem;
+    border-radius: 45px;
+    color: black;
+    font-size: 1.3em;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 100%;
+      left: 0;
+      border-radius: 45px;
+      background: rgb(20, 20, 20);
+      opacity: 0;
+      z-index: -1;
+      transition: all 0.5s;
+    }
+    &:hover {
+      color: #fff;
+      opacity: 1;
+
+      &::before {
+        left: 0;
+        right: 0;
+        opacity: 1;
+      }
+    }
+  }
+}

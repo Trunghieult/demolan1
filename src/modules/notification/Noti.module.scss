@@ -1,0 +1,116 @@
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+#show {
+  opacity: 1;
+}
+
+#hide {
+  opacity: 0;
+  z-index: -1;
+}
+
+.notification {
+  position: fixed;
+  top: 10vh;
+  height: 80vh;
+  right: 2.5%;
+  width: 22%;
+  min-width: 360px;
+  border-radius: 10px;
+  padding: 0 5px;
+  background-color: #282828;
+  z-index: 20;
+  transition: all linear 150ms;
+
+  & * {
+    color: white;
+    align-items: center;
+  }
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  margin: 0 10px;
+  height: 10%;
+  display: flex;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.noti-table {
+  overflow-y: auto;
+  height: 90%;
+}
+
+.noti-list {
+  position: relative;
+  z-index: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  max-height: 90%;
+}
+
+.noti-item {
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 7px;
+  margin: 10px 0;
+  border-radius: 10px;
+  min-height: 4rem;
+  transition: 300ms all linear;
+}
+
+.noti-item:hover {
+  background-color: rgba(47, 53, 66, 1);
+  transform: scale(1.01);
+}
+
+.content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.button-mark {
+  font-size: small;
+  border: none;
+  padding: 0;
+}
+
+.datetime {
+  font-style: italic;
+  color: #95a5a6;
+}
+
+.seen {
+  width: 12px;
+  aspect-ratio: 1/1;
+  background-color: #2980b9;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 992px) {
+  .notification {
+    width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .notification {
+    right: 0;
+    height: 90vh;
+    width: 100%;
+    background-color: #1a1a1a;
+  }
+}

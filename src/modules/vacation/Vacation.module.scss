@@ -1,0 +1,195 @@
+.wrapper {
+  --position-top: calc(10vh + 2rem);
+  min-height: 100vh;
+  padding: 2rem 0;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+// Css sidebar
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: var(--position-top);
+  left: 8rem;
+  width: 20%;
+  min-width: 250px;
+  padding-bottom: 2rem;
+  border-radius: 30px;
+  background: linear-gradient(
+    180deg,
+    rgba(40, 40, 40, 0.8) 0%,
+    rgba(41, 45, 52, 0.450219) 98.97%,
+    rgba(40, 40, 40, 0) 136.14%
+  );
+
+  .bg-container {
+    width: 100%;
+    position: relative;
+    margin-bottom: 1rem;
+    height: 20rem;
+    border-radius: 30px 30px 0 0;
+    .img-BG {
+      width: 100%;
+      height: 100%;
+      border-radius: 30px 30px 0 0;
+      cursor: pointer;
+      object-fit: cover;
+    }
+    .bg-icon-container {
+      position: absolute;
+      top: 0;
+      left: 1rem;
+      font-size: 1.2rem;
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 0.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+
+      .bg-icon {
+        margin-left: 0.4rem;
+      }
+    }
+  }
+
+  .sidebar-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 4rem;
+  }
+}
+
+.user-info,
+.vacation-detail,
+.route {
+  margin-bottom: 3.5rem;
+}
+
+// css for user-info
+.user-info {
+  margin-top: -20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-index,
+.user-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-avatar {
+  .avatar {
+    border-radius: 1.5rem;
+  }
+  .fullname {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    margin: 1rem 0 1px;
+    // border: 1px solid black;
+    text-align: center;
+  }
+
+  .username {
+    color: var(--username-color);
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-style: italic;
+  }
+}
+
+.user-index {
+  .index {
+    font-size: 2rem;
+  }
+
+  .index-title {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #736060;
+  }
+}
+
+// css for vacation detail
+
+.vacation-title {
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: 1px;
+
+  .title-icon {
+    margin-left: 1rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+}
+
+.vacation-info {
+  line-height: 2;
+
+  .vacation-name,
+  .timeline {
+    display: flex;
+    align-items: center;
+    span {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  .status {
+    span {
+      text-transform: capitalize;
+    }
+  }
+  span {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 200;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+  }
+
+  .icon {
+    margin-right: 2.5rem;
+  }
+
+  .memberList {
+    padding: 0 0.4rem 0.4rem 0;
+    &:hover {
+      border-bottom: 1px solid rgb(248, 244, 239);
+    }
+  }
+}
+
+// css for route
+
+.route {
+  text-align: center;
+  line-height: 2.5;
+  div {
+    font-size: 1.6rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+  }
+
+  .active {
+    background: #23262b;
+    border-radius: 20px;
+    color: #d2ae68;
+    font-weight: 600;
+  }
+}
+
+//CSS content

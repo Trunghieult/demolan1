@@ -1,0 +1,104 @@
+$sidebar-width: 40rem;
+$sidebar-left: 3rem;
+
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar-container {
+  --background-300: black;
+  position: fixed;
+  top: 10vh;
+  left: $sidebar-left;
+  width: $sidebar-width;
+  height: 89vh;
+  padding: 2rem 2rem;
+  background-color: var(--background-500);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+
+  .title {
+    font-weight: 900;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 1rem 0;
+    font-size: 2rem;
+  }
+
+  .filter-container {
+    .title {
+      font-weight: 600;
+      border: none;
+      font-size: 1.7rem;
+      padding: 2rem 0;
+    }
+
+    .fil-field {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+      padding: 1rem;
+      font-weight: 600;
+      font-size: 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      color: white;
+
+      .fil-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 1rem;
+        border-radius: 50%;
+        background-color: rgb(240, 248, 255, 0.2);
+      }
+
+      &:hover {
+        background-color: rgb(240, 248, 255, 0.1);
+      }
+    }
+
+    .active-field {
+      background-color: rgb(240, 248, 255, 0.1);
+    }
+  }
+}
+.result-container {
+  width: calc(100vw - $sidebar-width - $sidebar-left - 1rem);
+  min-height: 100%;
+  padding: 0 10vw;
+  margin-left: $sidebar-width + $sidebar-left;
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(218, 216, 216, 0.15);
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: rgba(201, 198, 198, 0);
+  }
+  .empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    border-radius: 12px;
+    background-color: var(--background-500);
+
+    div {
+      color: white !important;
+      font-size: 1.6rem;
+      letter-spacing: 1.4px;
+    }
+  }
+
+  .result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 2rem 8rem;
+    border-radius: 12px;
+    background-color: var(--background-500);
+  }
+}

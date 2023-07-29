@@ -1,0 +1,108 @@
+.feed-post {
+  margin-bottom: 4rem;
+  background-color: #282828;
+  padding: 1rem 0rem 1.5rem;
+  border-radius: 15px;
+  font-size: 1.7rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.feed-head {
+  display: flex;
+  margin: 0.5rem 1.5rem 1rem;
+
+  :hover {
+    color: #d2ae68;
+  }
+}
+
+.feed-ava {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.feed-cover {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  display: block;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 0;
+  }
+}
+
+.feed-head-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  justify-content: space-around;
+}
+
+.feed-time {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.feed-cover-rad {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  pointer-events: none;
+}
+
+.cover-item {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  right: 3rem;
+  font-size: 2rem;
+  width: 5%;
+  text-align: center;
+}
+
+.views {
+  bottom: 2rem;
+}
+
+.cmts {
+  bottom: 10rem;
+}
+
+.likes {
+  bottom: 18rem;
+}
+
+.feed-title-center {
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.feed-title {
+  margin: 1rem 0rem 0rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.feed-cover:hover ~ .feed-title-center,
+.feed-title-center:hover {
+  .feed-title {
+    color: #d2ae68;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+}
+
+@media (max-width: 576px) {
+}

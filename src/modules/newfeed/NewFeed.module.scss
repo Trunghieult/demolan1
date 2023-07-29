@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap");
+
+.container {
+  // --margin-top: 5vh;
+  background-color: #1a1a1a;
+  color: white;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 2.5%;
+  // margin-top: calc(var(--margin-top));
+
+  a,
+  li {
+    list-style: none;
+    color: white;
+  }
+
+  li {
+    margin: 1.5rem 0rem;
+  }
+}
+
+ul {
+  margin: 0rem 3rem;
+  font-size: 1.7rem;
+}
+
+@keyframes glitch-anim {
+  $steps: 20;
+  @for $i from 0 to $steps {
+    #{percentage($i*(1/$steps))} {
+      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      transform: skew((random(100) / 100) + deg);
+    }
+  }
+}
+
+@keyframes glitch-anim2 {
+  $steps: 20;
+  @for $i from 0 to $steps {
+    #{percentage($i*(1/$steps))} {
+      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      transform: skew((random(100) / 100) + deg);
+    }
+  }
+}
+
+@keyframes glitch-skew {
+  $steps: 10;
+  @for $i from 0 to $steps {
+    #{percentage($i*(1/$steps))} {
+      transform: skew((random(10) - 5) + deg);
+    }
+  }
+}
+
+.feed {
+  width: 42%;
+}
+
+@media only screen and (max-width: 992px) {
+  .container {
+    --margin-top: 2vh;
+    padding: 0 1.5%;
+  }
+
+  .feed {
+    width: 65%;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    flex-direction: column-reverse;
+    margin-top: 0;
+  }
+  .feed {
+    width: 100%;
+  }
+}

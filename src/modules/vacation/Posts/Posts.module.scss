@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width: 40%;
+  margin: auto;
+}
+
+.create-post {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: center;
+  background: #282828;
+  border-radius: 10px;
+
+  div {
+    flex: 1;
+    background: #222;
+    padding: 2rem 2rem;
+    color: #fff;
+    font-weight: 200;
+    font-size: 1.7rem;
+    font-style: italic;
+    border-radius: 25px;
+  }
+}

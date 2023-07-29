@@ -1,0 +1,24 @@
+.wrapper {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 0 2.5%;
+  margin: auto;
+  height: 10vh;
+  display: flex;
+  background-color: #1a1a1a;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+
+@media (max-width: 576px) {
+  .right-wrapper {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5%;
+  }
+}

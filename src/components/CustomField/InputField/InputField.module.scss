@@ -1,0 +1,121 @@
+$input-height: 6rem;
+$padding-left: 3rem;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+// css common input's class
+.input {
+  width: 100%;
+  height: $input-height;
+  margin-bottom: 20px;
+  padding: 5rem $padding-left 2rem;
+  border-radius: 15px;
+  background: rgba(31, 32, 35, 0.5);
+  color: #ffffff;
+  font-size: 1.1em;
+  z-index: 10;
+  line-height: 1.5;
+}
+
+.label,
+.active {
+  position: absolute;
+  top: 25px;
+  left: $padding-left;
+  pointer-events: none;
+  font-size: 0.9em;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.input:focus ~ .label,
+.active {
+  top: 10px;
+  font-size: 0.8em;
+}
+
+.label {
+  font-style: italic;
+  color: var(--light-grey);
+  z-index: 10;
+}
+.required::after {
+  content: "*";
+  color: rgb(243, 52, 52);
+  margin-left: 4px;
+}
+.icon {
+  position: absolute;
+  top: calc($input-height / 2);
+  right: 3rem;
+  cursor: pointer;
+  z-index: 100;
+  user-select: none;
+}
+
+// Css when form of Register
+.userName,
+.user-personal {
+  width: 45%;
+}
+.userName-input {
+  width: 100%;
+  padding-left: $padding-left;
+  padding-right: $padding-left;
+}
+
+// Css for UpdateUser- Personal form
+.user-personal,
+.user-secure {
+  margin-bottom: 20px;
+  input {
+    background: var(--background-300);
+  }
+}
+.user-personal {
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(../../../images/calendar.png) no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 30px;
+    border-width: thin;
+  }
+
+  input[type="date"]::-webkit-datetime-edit-fields-wrapper {
+    // padding: 0 15%;
+    font-size: 1.6rem;
+    user-select: none;
+  }
+  input[type="date"]:focus::-webkit-datetime-edit-fields-wrapper {
+    color: white;
+  }
+  input[type="date"]::-webkit-datetime-edit-text {
+    user-select: none;
+  }
+
+  .empty::-webkit-datetime-edit-fields-wrapper {
+    color: transparent;
+  }
+}
+// Css for UpdateUser- Security form
+.user-secure {
+  width: 90%;
+  margin: 0 auto 20px;
+}
+// Css When Error
+.error {
+  align-self: flex-start;
+  margin: -10px 0 20px 20px;
+  color: rgb(243, 70, 70);
+  font-size: 0.75em;
+  letter-spacing: 0.8px;
+}

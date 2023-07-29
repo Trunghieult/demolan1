@@ -1,0 +1,98 @@
+.album-wrap {
+  background-color: inherit;
+  position: relative;
+  width: 70%;
+  left: 30%;
+}
+
+.album-title {
+  top: 9.5vh;
+  z-index: 2;
+  font-size: 5rem;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 3rem;
+}
+
+.album-container {
+  display: flex;
+  flex-flow: row wrap;
+  min-width: 0;
+  height: fit-content;
+  margin: 0 5%;
+}
+
+.stack {
+  margin-bottom: 4rem;
+  // margin-right: 4rem;
+  width: 85%;
+  max-width: 22rem;
+  transition: 0.25s ease;
+  &:hover {
+    transform: rotate(5deg);
+    .card:before {
+      transform: translatey(-2%) rotate(-4deg);
+    }
+    .card:after {
+      transform: translatey(2%) rotate(4deg);
+    }
+  }
+}
+
+.card-album-container {
+  aspect-ratio: 2 / 2.2;
+  // border: 4px solid;
+  background-color: #fff;
+  position: relative;
+  transition: 0.15s ease;
+  cursor: pointer;
+  padding: 5% 5% 15% 5%;
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    // border: 4px solid;
+    background-color: #fff;
+    transform-origin: center center;
+    z-index: -1;
+    transition: 0.15s ease;
+    top: 0;
+    left: 0;
+  }
+
+  &:before {
+    transform: translatey(-2%) rotate(-6deg);
+  }
+
+  &:after {
+    transform: translatey(2%) rotate(6deg);
+  }
+}
+.image {
+  width: 100%;
+  height: 100%;
+  // border: 4px solid;
+  background-color: #eee;
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+
+.images,
+.images > img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.browser-warning {
+  margin-bottom: 4rem;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .browser-warning {
+    display: none;
+  }
+}

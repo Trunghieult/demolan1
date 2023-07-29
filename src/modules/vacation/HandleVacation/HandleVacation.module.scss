@@ -1,0 +1,196 @@
+// Css Modal
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  textarea,
+  input {
+    background: rgba(162, 144, 144, 0.72);
+    color: white;
+    outline: none !important;
+    border: none !important;
+    font-size: 1.6rem;
+    padding: 2rem;
+
+    &::placeholder {
+      color: white !important;
+      font-size: 1.6rem;
+      font-style: italic;
+      letter-spacing: 1px;
+    }
+  }
+
+  input {
+    font-size: 1.8rem;
+    &::placeholder {
+      font-size: 1.9rem;
+      font-weight: 600;
+    }
+  }
+  span {
+    background-color: transparent !important;
+    color: white !important;
+    // &:hover {
+    //   color: black !important;
+    // }
+  }
+}
+.select-date {
+  input {
+    color: white !important;
+  }
+}
+// user'info
+.user-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  input {
+    font-size: 1.2rem !important;
+    font-style: italic;
+    font-weight: 600;
+
+    &::placeholder {
+      font-weight: 200;
+      font-size: 1.2rem;
+    }
+  }
+
+  .info-name {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+
+    .username {
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1.5rem;
+    }
+  }
+}
+// css status
+.status {
+  position: relative;
+  font-size: 1.2rem;
+  font-style: normal;
+  color: #b9babb;
+  cursor: pointer;
+
+  .icon {
+    margin-left: 0.5rem;
+  }
+  span {
+    text-transform: capitalize;
+  }
+}
+
+.dropdown-status {
+  position: absolute;
+  border-radius: 8px;
+  background-color: #b9babb;
+  z-index: 100;
+  color: black;
+  font-weight: 500;
+
+  div {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+
+    &:hover {
+      background: rgba(59, 55, 55, 0.35);
+    }
+  }
+}
+
+// add on
+.post-extension {
+  background-color: rgba(162, 144, 144, 0.35);
+  padding: 2rem 4rem;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  font-weight: 300;
+  .extension-container {
+    display: flex;
+    justify-content: space-between;
+    div {
+      font-style: italic;
+    }
+  }
+}
+.extensions {
+  display: flex;
+  gap: 2rem;
+
+  .icon {
+    font-size: 2.2rem;
+    cursor: pointer;
+  }
+}
+.result-list,
+.resources {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.result-list {
+  margin-top: 0.5rem;
+
+  span {
+    position: relative;
+    border: 1px solid rgb(122, 121, 121);
+    border-radius: 4px;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: -0.5rem;
+    cursor: pointer;
+  }
+}
+
+.resources {
+  margin-top: 1rem;
+
+  .resource {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+  }
+}
+// btn
+.btn-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba(116, 96, 96, 0.35);
+  color: white;
+  font-style: italic;
+  font-size: 1.6rem;
+  letter-spacing: 1.2px;
+  border-radius: 20px;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.2;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+}
+@media (max-width: 576px) {
+}

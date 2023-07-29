@@ -1,0 +1,122 @@
+.feed-container {
+  position: relative;
+}
+
+.feed {
+  margin: 0;
+  overflow-x: hidden;
+
+  .feed-item {
+    margin-block-end: 3rem !important;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .feed-cover-rad {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    pointer-events: none;
+    border-radius: 15px;
+  }
+
+  .feed-info {
+    position: absolute;
+    bottom: 18%;
+    right: 2rem;
+    font-size: 1.8rem;
+    width: 7%;
+    text-align: center;
+    color: white;
+
+    & > * {
+      margin-top: 2.5rem;
+    }
+
+    * {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+.feed-card {
+  background-color: #282828;
+
+  & > * {
+    padding: 0 !important;
+    overflow: hidden;
+    border-radius: 14px;
+  }
+
+  .feed-cover {
+    padding: 0 !important;
+    width: 100%;
+    height: 35vh;
+    opacity: 0.85;
+    transition: all linear 300ms;
+  }
+
+  .feed-title {
+    padding: 10px 15px;
+    margin: 0 !important;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    transition: color linear 300ms;
+  }
+
+  &:hover {
+    .feed-cover {
+      transform: scale(1.1) rotate(2deg);
+      opacity: 1;
+    }
+    .feed-title {
+      color: #d2ae68;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .feed-card {
+    .feed-cover {
+      height: 22vh;
+    }
+    .feed-title {
+      padding: 7px 10px;
+    }
+  }
+
+  .feed-item {
+    .feed-info {
+      right: 1.5rem;
+      font-size: 1.6rem;
+      width: fit-content;
+      bottom: 20%;
+
+      & > * {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .feed-container {
+    min-height: 90vh;
+    padding-bottom: 10vh;
+  }
+  .feed-card {
+    .feed-cover {
+      height: 35vh;
+    }
+  }
+}

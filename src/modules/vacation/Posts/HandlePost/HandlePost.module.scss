@@ -1,0 +1,149 @@
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  textarea {
+    background: rgba(162, 144, 144, 0.72);
+    color: white;
+    outline: none !important;
+    border: none !important;
+    font-size: 1.6rem;
+    padding: 2rem;
+
+    &::placeholder {
+      color: white !important;
+      font-size: 1.7rem;
+      font-style: italic;
+    }
+  }
+}
+
+// user'info
+.user-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+
+  .info-name {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+
+    .username {
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.img-uploader {
+  width: 95%;
+  margin: auto;
+  max-height: 40rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 15rem;
+    cursor: pointer;
+    margin-top: 10px;
+
+    .resource {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: 0 0;
+      }
+    }
+  }
+  .img-btn {
+    position: absolute;
+    top: 0;
+    right: -0.5rem;
+    color: white;
+    padding: 0.1rem;
+    z-index: 10;
+    border-radius: 50%;
+    background-color: black;
+    font-weight: 600;
+    cursor: pointer;
+    &:hover {
+      scale: 1.3;
+    }
+  }
+}
+// add on
+.post-extension-container {
+  background-color: rgba(162, 144, 144, 0.35);
+  border-radius: 8px;
+  font-weight: 600;
+
+  .post-extension {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+  }
+
+  div {
+    font-style: italic;
+  }
+
+  .result {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 4rem 1rem;
+    span {
+      font-weight: 300;
+      color: rgb(230, 230, 230);
+    }
+  }
+}
+.extensions {
+  display: flex;
+  gap: 2rem;
+
+  .icon {
+    font-size: 2.2rem;
+  }
+}
+
+.icon {
+  cursor: pointer;
+}
+
+// btn
+.btn-submit {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba(116, 96, 96, 0.35);
+  color: white;
+  font-style: italic;
+  font-size: 1.6rem;
+  letter-spacing: 1.2px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.disable {
+  cursor: not-allowed;
+}

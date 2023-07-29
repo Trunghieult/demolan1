@@ -1,0 +1,247 @@
+.wrapper {
+  padding: 0 2rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+}
+
+// react, comment
+.react,
+.comment {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cmt-container {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 2px solid rgba(240, 221, 186, 0.3);
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(58, 59, 60);
+  gap: 2rem;
+  border-radius: 15px;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+
+  .input-content {
+    flex: 1;
+    padding: 2rem 0 0.5rem;
+  }
+
+  textarea {
+    width: 100%;
+    height: 50px;
+    font-size: 1.3rem;
+    font-family: var(--font-1);
+    letter-spacing: 1px;
+    color: white;
+    background-color: transparent;
+    overflow: overlay;
+    scrollbar-gutter: stable;
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(104, 103, 103, 0.7);
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: rgba(240, 234, 234, 0);
+    }
+  }
+  button {
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+  }
+}
+.cmt-list {
+  padding: 0.5rem;
+  max-height: 50rem;
+  overflow: overlay;
+}
+.cmt-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem 2rem;
+  background-color: rgb(58, 59, 60);
+  border-radius: 10px;
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+}
+
+.item-content-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.5rem;
+  .item-username {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgba(233, 229, 229);
+
+    .moment {
+      font-size: 1rem;
+      font-style: italic;
+      opacity: 0.5;
+      font-weight: normal;
+    }
+  }
+  .item-content,
+  .edit-cmt {
+    display: flex;
+    font-size: 1.3rem;
+    color: rgba(250, 249, 249, 0.8);
+  }
+}
+.icon {
+  margin-left: auto;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(85, 85, 85);
+  }
+}
+
+.icon-container {
+  display: flex;
+  gap: 1rem;
+
+  svg {
+    cursor: pointer;
+  }
+}
+.pop-over {
+  min-width: 10rem !important;
+  margin: -12px !important;
+  padding: 1rem 0;
+  border-radius: 8px;
+  background: rgb(184, 182, 182);
+  color: rgb(56, 56, 56);
+  font-weight: 500;
+  text-align: center;
+
+  p {
+    padding: 0.4rem 0;
+    cursor: pointer;
+
+    &:hover {
+      background: rgb(167, 166, 166);
+    }
+  }
+}
+
+// Edit cmt css
+
+.edit-cmt {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  border: 1.5px solid rgb(185, 153, 153);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  textarea {
+    width: 90%;
+    height: 50px;
+    font-size: 1.3rem;
+    font-family: var(--font-1);
+    letter-spacing: 1px;
+    color: white;
+    background-color: transparent;
+    overflow: overlay;
+    scrollbar-gutter: stable;
+    padding: 1rem;
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(104, 103, 103, 0.7);
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: rgba(240, 234, 234, 0);
+    }
+  }
+}
+
+.loading {
+  font-size: 1.2rem;
+  color: white;
+  opacity: 0.7;
+}
+// React css
+
+.react-list-wrapper {
+  position: relative;
+}
+.react-list-container {
+  position: absolute;
+  top: 2.2rem;
+  left: -1rem;
+  width: 20rem;
+  min-height: 5rem;
+  max-height: 20rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0);
+  border-radius: 8px;
+  overflow: auto;
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(231, 228, 228, 0.1);
+  }
+}
+
+.react-list-item {
+  width: 100%;
+  padding: 0 1rem !important;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  h4 {
+    font-size: 1.2rem !important;
+    font-weight: 600;
+    margin: 0 !important;
+    color: white !important;
+  }
+}
+
+.liked {
+  color: #e66c6c;
+  &:hover {
+    color: white;
+  }
+}
+.unlike {
+  color: white;
+  &:hover {
+    color: #e66c6c;
+  }
+}
+
+// loading
+
+.interaction-loading {
+  margin-top: 1rem;
+}

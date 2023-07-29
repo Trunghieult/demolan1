@@ -1,0 +1,60 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.title {
+  font-style: italic;
+  font-size: 3.5rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .wrapper {
+    display: block;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    margin: 2.5rem 0;
+    padding-left: 5%;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+  }
+
+  .wrapper {
+    input,
+    label,
+    select {
+      font-size: 1.3rem;
+    }
+
+    & > form > * {
+      padding: 0;
+
+      & > * {
+        width: 48%;
+        margin-bottom: 10px;
+      }
+    }
+
+    input[type="date"]::-webkit-inner-spin-button,
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      display: none;
+      -webkit-appearance: none;
+    }
+
+    option {
+      width: 10vw;
+      max-width: 10vw;
+      overflow: hidden;
+    }
+  }
+}

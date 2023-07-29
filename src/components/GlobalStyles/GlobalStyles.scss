@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+//Root
+
+:root {
+  --font-1: "Inter", sans-serif;
+  // Color
+  --light-grey: #c9c9c9;
+  --username-color: rgba(255, 255, 255, 0.7);
+  --background-100: linear-gradient(
+    180deg,
+    rgba(40, 40, 40, 0.3) 0%,
+    rgba(41, 45, 52, 0.168832) 98.97%,
+    rgba(40, 40, 40, 0) 136.14%
+  );
+  --background-300: linear-gradient(
+    180deg,
+    rgba(71, 71, 71, 0.3) 0%,
+    rgba(79, 86, 99, 0.169) 98.97%,
+    rgba(102, 100, 100, 0) 136.14%
+  );
+  --background-500: #242526;
+}
+/* Reset CSS */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
+
+body {
+  color: var(--primary-color);
+  font-family: var(--font-1);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow: overlay;
+}
+
+button,
+input,
+[tabindex],
+textarea {
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+  user-select: none;
+  resize: none;
+}
+
+a[href] {
+  text-decoration: none;
+  appearance: none;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+/* Scroll-bar css */
+html *::-webkit-scrollbar {
+  border-radius: 0;
+  width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+html *::-webkit-scrollbar-track {
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+// config antd
+.ant-list-empty-text {
+  display: none;
+}
+
+.ant-card-body {
+  padding: 0 !important;
+}
+.ant-image {
+  width: 100%;
+  height: 100%;
+}
+
+.ant-menu-submenu-popup {
+  background-color: #1a1a1a !important;
+  box-shadow: 2px 2px 5px black;
+
+  ul {
+    background-color: #1a1a1a !important;
+  }
+}
+
+// antd Interactions component
+.ant-list-item-meta {
+  align-items: center !important;
+}
+// antd handlePost
+.ant-list-item {
+  margin-block-end: 0 !important;
+}

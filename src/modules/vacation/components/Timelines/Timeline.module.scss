@@ -1,0 +1,90 @@
+.wrapper {
+  --header-padding: 4rem;
+  --header-size: 2.5rem;
+  --wrapper-width: 35rem;
+  --active-color: #d2ae68;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: var(--position-top);
+  right: 8rem;
+  width: 30rem;
+  min-height: 60vh;
+  max-height: 70vh;
+  padding: var(--header-padding);
+  background-color: #282828;
+  border-radius: 15px;
+  border: 1px solid #534242;
+
+  header {
+    margin-bottom: var(--header-padding);
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: var(--header-size);
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    line-height: 4;
+    max-height: 30vh;
+    overflow: overlay;
+  }
+}
+
+// css active timeline
+
+.active {
+  position: absolute;
+  top: calc(var(--header-padding) * 2 + var(--header-size) + 10rem);
+  right: 17rem;
+  transform: rotate(90deg);
+  width: 30rem;
+  border-radius: 5px;
+  padding: 1rem 4rem;
+  background: rgba(217, 217, 217, 0.09);
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.date {
+  margin-left: 3rem;
+  color: var(--active-color);
+  background: #23262b;
+  border-radius: 20px;
+  padding: 0.5rem 2rem;
+}
+
+// css timeline
+
+.timeline-item {
+  width: 100%;
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+
+  .index {
+    display: inline-block;
+    width: 30px;
+  }
+
+  &:hover {
+    color: var(--active-color);
+    .value {
+      text-decoration: underline;
+    }
+  }
+}
+
+.item-active {
+  color: var(--active-color);
+
+  .value {
+    text-decoration: underline;
+  }
+}
